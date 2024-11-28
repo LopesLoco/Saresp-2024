@@ -80,4 +80,9 @@ button:hover {
     background-color: #45a049;
 }
 
-
+/* Estilo de texto de erro (caso queira adicionar mais tarde) */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
