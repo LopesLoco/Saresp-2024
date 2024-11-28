@@ -51,3 +51,37 @@
         </form>
     </div>
 
+    <!-- Área para exibir os dados -->
+    <div id="resultado" class="resultado">
+        <h2>Dados Recebidos:</h2>
+        <p><strong>Nome:</strong> <span id="result-nome"></span></p>
+        <p><strong>E-mail:</strong> <span id="result-email"></span></p>
+        <p><strong>Data de Nascimento:</strong> <span id="result-data-nascimento"></span></p>
+        <p><strong>Disciplina:</strong> <span id="result-disciplina"></span></p>
+        <p><strong>Endereço:</strong> <span id="result-endereco"></span></p>
+    </div>
+
+    <script>
+        // Função para capturar os dados do formulário e exibir na página
+        document.getElementById('form-cadastro').addEventListener('submit', function(event) {
+            event.preventDefault();  // Impede o envio do formulário
+
+            // Obtendo os valores dos campos do formulário
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const dataNascimento = document.getElementById('data-nascimento').value;
+            const disciplina = document.getElementById('disciplina').value;
+            const endereco = document.getElementById('endereco').value;
+
+            // Exibindo os valores recebidos na área de resultado
+            document.getElementById('result-nome').textContent = nome;
+            document.getElementById('result-email').textContent = email;
+            document.getElementById('result-data-nascimento').textContent = dataNascimento;
+            document.getElementById('result-disciplina').textContent = disciplina;
+            document.getElementById('result-endereco').textContent = endereco;
+
+            // Mostra a área de resultado
+            document.getElementById('resultado').style.display = 'block';
+        });
+    </script>
+
